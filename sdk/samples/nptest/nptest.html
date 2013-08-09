@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <title>TEST WEB PAGE for test plugin</title>
+  </head>
+  <body>
+    <object id="obj" type="application/test-plugin" width=200 height=150 ></object>
+    <br />
+    <script type="text/javascript">
+      (function()
+      {
+        var obj = document.getElementById("obj");
+        if (obj)
+        {
+          obj.OnJsFunc = objJSfunc;
+          obj.func();
+        }
+        else
+        {
+          alert("null object");
+        }
+
+        function objJSfunc()
+        {
+          alert("JS function called!");
+        }
+        })();
+    </script>
+  </body>
+</html>
